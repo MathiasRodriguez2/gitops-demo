@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-app
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/MathiasRodriguez2/gitops-demo.git"
+    path: app
+    targetRevision: main
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
