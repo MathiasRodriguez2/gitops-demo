@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  prueba: ""
+immutable: false
+kind: ConfigMap
+metadata:
+  name: test
+  namespace: demo
