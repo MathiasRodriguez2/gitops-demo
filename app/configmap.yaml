@@ -5,4 +5,5 @@ immutable: false
 kind: ConfigMap
 metadata:
   name: test
+dada
   namespace: demo
