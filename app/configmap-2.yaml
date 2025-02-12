@@ -4,6 +4,6 @@ data:
 immutable: false
 kind: ConfigMap
 metadata:
-  name: test
+  name: test-1
   namespace: demo
 dsdasdsad
