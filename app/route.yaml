@@ -1,0 +1,19 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: demo-route
+  namespace: demo
+  labels:
+    app.kubernetes.io/instance: demo-app
+spec:
+  to:
+    kind: Service
+    name: demo-service
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+    destinationCACertificate: ''
+  host: demo-gitops.apps.paas.iantel.com.uy
+  port:
+    targetPort: 80
+  alternateBackends: []
