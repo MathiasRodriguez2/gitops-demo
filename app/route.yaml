@@ -12,8 +12,6 @@ spec:
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
-    destinationCACertificate: ''
   host: demo-gitops.apps.paas.iantel.com.uy
   port:
     targetPort: 80
-  alternateBackends: []
